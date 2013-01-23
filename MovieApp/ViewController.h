@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,NSURLConnectionDataDelegate,UISearchBarDelegate>
+{
+
+}
+@property (retain, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (nonatomic,retain) IBOutlet UITableView *tableView;
+@property (nonatomic,strong) NSMutableData *webData;
+@property (nonatomic,strong) NSMutableData *posterData;
+@property (nonatomic,strong) NSMutableArray *movieKeys;
+@property (nonatomic,strong) NSMutableArray *movies;
+@property (nonatomic,strong) NSURLConnection *connectionMovieJson;
 
 @end
